@@ -127,9 +127,38 @@
 // console.log(num2);
 // console.log(arr3);
 // 配列のコピー、結合
-const arr4 = [30, 40];
-const arr5 = [50, 60];
-const arr6 = [...arr4];
-console.log(arr6);
-const arr7 = [...arr4, ...arr5];
-console.log(arr7);
+// const arr4 = [30, 40];
+// const arr5 = [50, 60];
+// const arr6 = [...arr4];
+// console.log(arr6);
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7);
+/**
+ * mapやfilterを使った配列処理
+ */
+//for文を使った処理
+const nameArr = ["塩見", "青木", "山田"];
+// for(let index = 0; index < nameArr.length; index++){
+//   console.log(`${index　+1}番は${nameArr[index]}です`);
+// }
+//mapを使った葉入れt処理
+// const nameArr2 = nameArr.map((name)=>{
+//   return name;
+// })
+//   console.log(nameArr2);
+// nameArr.map((name, index) => console.log(`${index+1}番は${name}です`));
+
+//fillterを使った配列処理
+// const numArr = [1,2,3,4,5];
+// const newNumArr = numArr.filter((num)=>{
+//   return num % 2 === 1;
+// });
+//   console.log(newNumArr);
+const newNumArr = nameArr.map((name) => {
+  if (name === "山田") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNumArr);
