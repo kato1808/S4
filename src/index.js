@@ -137,7 +137,7 @@
  * mapやfilterを使った配列処理
  */
 //for文を使った処理
-const nameArr = ["塩見", "青木", "山田"];
+// const nameArr = ["塩見", "青木", "山田"];
 // for(let index = 0; index < nameArr.length; index++){
 //   console.log(`${index　+1}番は${nameArr[index]}です`);
 // }
@@ -154,11 +154,26 @@ const nameArr = ["塩見", "青木", "山田"];
 //   return num % 2 === 1;
 // });
 //   console.log(newNumArr);
-const newNumArr = nameArr.map((name) => {
-  if (name === "山田") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
-console.log(newNumArr);
+/**
+ * 三項演算子
+ */
+//ある条件　条件がtrueの時：　条件がfalseの時
+// const val1 = 1 > 0 ? 'trueです'　: 'falseです'
+// console.log(val1);
+//
+//
+/**
+ * 論理演算子の本当の意味を知ろう
+ */
+// const flag1 = true;
+// const flag2 = false;
+// if (flage1 || flage2){
+//   console.log('1か2はtrueです')；
+//   }
+const num = 100;
+const fee = num || "金額未設定です";
+console.log(fee);
+
+const num2 = num1;
+const fee2 = num2 && "何か設定されました";
+console.log(fee2);
